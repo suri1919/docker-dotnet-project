@@ -1,5 +1,5 @@
-aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 754495971822.dkr.ecr.ap-south-1.amazonaws.com
-docker pull 754495971822.dkr.ecr.ap-south-1.amazonaws.com/docker-newproject:latest:$1
+aws ecr get-login-password --region ap-south-1 | aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 855991486920.dkr.ecr.ap-south-1.amazonaws.com
+docker pull 855991486920.dkr.ecr.ap-south-1.amazonaws.com/docker-application:$1
 echo "docker pull succeeded"
 docker ps -a
 echo "previous commands shows if existing docker is present or not"
