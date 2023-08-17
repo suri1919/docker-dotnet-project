@@ -6,7 +6,7 @@ pipeline {
       steps {
 		sh '''
 		 whoami
-		 aws ecr get-login-password --region ap-south-1 | aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 855991486920.dkr.ecr.ap-south-1.amazonaws.com
+		 aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 855991486920.dkr.ecr.ap-south-1.amazonaws.com
 		 docker build -t docker-application .
 		 docker tag docker-application:latest 855991486920.dkr.ecr.ap-south-1.amazonaws.com/docker-application:${BUILD_NUMBER}
 		 docker push 855991486920.dkr.ecr.ap-south-1.amazonaws.com/docker-application:${BUILD_NUMBER}
